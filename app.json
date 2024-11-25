@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "Telegram",
+    "slug": "Telegram",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "myapp",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1E2732"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.jaypal.telegramClone",
+      "infoPlist": {
+      "CFBundleURLTypes": [
+        {
+          "CFBundleURLSchemes": ["com.googleusercontent.apps.962136270085-47g4912v5ino3qo2nr5jpglmln650d3l"]
+        }
+      ]
+    }
+    },
+    "android": {
+      "googleServicesFile": "./android/app/google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.jaypal.telegramClone",
+      "permissions": [
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.googleusercontent.apps.962136270085-47g4912v5ino3qo2nr5jpglmln650d3l"
+        }
+      ],
+      "expo-router",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow $(PRODUCT_NAME) to access your photos",
+          "cameraPermission": "Allow $(PRODUCT_NAME) to open the camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "tsconfigPaths": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "7bff82cc-905d-46e5-8114-1d3ebe6df8e7"
+      }
+    }
+  }
+}
